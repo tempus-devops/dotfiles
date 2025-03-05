@@ -17,7 +17,6 @@ return {
 					"html",
 					"helm_ls",
 					"jsonls",
-					"intelephense",
 					"jedi_language_server",
 					"sqlls",
 					"terraformls",
@@ -30,48 +29,45 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
-    lazy = false,
+		lazy = false,
 		config = function()
-			local capabilities = require('cmp_nvim_lsp').default_capabilities()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspconfig.dockerls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspconfig.docker_compose_language_service.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspconfig.bashls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspconfig.html.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspconfig.helm_ls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspconfig.jsonls.setup({
-				capabilities = capabilities
-			})
-			lspconfig.intelephense.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspconfig.jedi_language_server.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspconfig.sqlls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspconfig.terraformls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspconfig.lemminx.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspconfig.yamlls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
