@@ -23,6 +23,7 @@ return {
 					"tflint",
 					"lemminx",
 					"yamlls",
+                    "phpactor",
 				},
 			})
 		end,
@@ -67,6 +68,9 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.yamlls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.phpactor.setup({
 				capabilities = capabilities,
 			})
 
