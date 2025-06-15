@@ -11,6 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 
 vim.opt.rtp:prepend(lazypath)
+vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 
 local opts = {}
 
